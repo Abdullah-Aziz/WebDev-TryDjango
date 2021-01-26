@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+{% for instance in object_list %}
+<p> {{instance.id}} - <a href="/blog/{{ instance.id}}/"> {{ instance.title }} </a> </p>
+
+  <body>
+    <ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+  </body>
+{% endfor %}
+{% endblock %}
+
